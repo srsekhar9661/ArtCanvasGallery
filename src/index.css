@@ -162,3 +162,389 @@ a {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+.detail-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.detail-image-wrapper img {
+  width: 600px;
+  max-width: 100%;
+  border-radius: 12px;
+  transition: 0.4s ease;
+}
+
+.detail-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.detail-overlay button {
+  padding: 10px 20px;
+  border: none;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.detail-image-wrapper:hover .detail-overlay {
+  opacity: 1;
+}
+
+/* Modal Styles */
+/* Fullscreen modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+/* Controls */
+.modal-controls {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  z-index: 10;
+}
+
+.modal-controls button {
+  margin-left: 12px;
+  padding: 10px 16px;
+  background: #111;
+  color: #fff;
+  border: 1px solid #444;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Large viewing area */
+.modal-image-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Image styling */
+.modal-image {
+  max-width: none;
+  max-height: none;
+  user-select: none;
+  transition: transform 0.1s ease;
+}
+
+/* Home page */
+/* ===== HOME HERO ===== */
+.home-hero {
+  height: 90vh;
+  background: url("https://picsum.photos/1600/900?grayscale&blur=2")
+    center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.home-hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.home-hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.home-hero-content p {
+  color: #ccc;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+}
+
+/* Buttons */
+.hero-btn {
+  background: #fff;
+  color: #000;
+  padding: 12px 28px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #ddd;
+}
+
+.outline-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 24px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.outline-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ===== FEATURED ===== */
+.featured-section {
+  padding: 80px 0;
+}
+
+.featured-section h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.featured-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.featured-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.featured-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.featured-overlay h3 {
+  color: #fff;
+}
+
+.featured-card:hover img {
+  transform: scale(1.1);
+}
+
+.featured-card:hover .featured-overlay {
+  opacity: 1;
+}
+
+/* ===== ABOUT PREVIEW ===== */
+.about-preview {
+  padding: 80px 0;
+  text-align: center;
+  background: #111;
+}
+
+.about-preview p {
+  max-width: 700px;
+  margin: 20px auto;
+  color: #bbb;
+  line-height: 1.7;
+}
+
+/* ===== CTA ===== */
+.cta-section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.cta-section h2 {
+  margin-bottom: 30px;
+}
+
+
+/* About page */
+/* ===== ABOUT HERO ===== */
+.about-hero {
+  padding: 120px 20px;
+  text-align: center;
+  background: #111;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.about-hero p {
+  color: #bbb;
+  font-size: 1.2rem;
+}
+
+/* ===== ABOUT CONTENT ===== */
+.about-content {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  padding: 80px 0;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  color: #bbb;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* ===== PHILOSOPHY ===== */
+.about-philosophy {
+  padding: 100px 20px;
+  text-align: center;
+  background: #0f0f0f;
+}
+
+.about-philosophy h2 {
+  margin-bottom: 20px;
+}
+
+.about-philosophy p {
+  color: #ccc;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+/* ===== STATS ===== */
+.about-stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 0;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.stat h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.stat p {
+  color: #aaa;
+}
+
+/* contact pagae */
+
+/* ===== CONTACT HERO ===== */
+.contact-hero {
+  padding: 120px 20px;
+  text-align: center;
+  background: #111;
+}
+
+.contact-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.contact-hero p {
+  color: #bbb;
+}
+
+/* ===== CONTACT CONTENT ===== */
+.contact-content {
+  display: flex;
+  gap: 60px;
+  padding: 80px 0;
+  flex-wrap: wrap;
+}
+
+.contact-form {
+  flex: 1;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  background: #111;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #fff;
+}
+
+/* ===== CONTACT INFO ===== */
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h2 {
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  color: #bbb;
+  margin-bottom: 15px;
+}
