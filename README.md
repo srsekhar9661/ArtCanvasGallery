@@ -4,30 +4,30 @@ A modern, dark-themed art gallery web application built using React + Vite.
 This project showcases a professional painting portfolio with smooth UI interactions, dynamic routing,
 fullscreen image viewer with zoom & drag functionality, and a premium layout design.
 
-## Live Features
+## 🚀 Live Features
+🌙 Dark artistic theme
+🖼 Dynamic Gallery Grid
+🔍 Fullscreen Image Viewer
+    Zoom in / Zoom out
+    Mouse wheel zoom
+    Drag to pan
+    ESC to close
+🎨 Painting Detail Page
+🏠 Cinematic Home Page
+👨‍🎨 Professional About Page
+📩 Styled Contact Form
+📌 Fixed Navbar with scroll shadow
+🔄 Scroll-to-top on route change
+📱 Responsive layout (basic)
 
-Dark artistic theme
-Dynamic Gallery Grid
-Fulscreen Image Viewer
-    zoom in / zoom out
-    Mouse wheel zoom 
-    Drag to pan 
-    ESCt to close
-Painting Detail Page
-Cinematic Home Page
-Prodessional About Page
-Styles Contact form 
-Fixed Navbar with scroll shadow 
-Scroll-to-top on route change
-Responsive layout (basic)
-
-## Tech Stack used
+## 🛠 Tech Stack used
 React
 Vite 
 React Router DOM
 javascript(ES6+)
 
-## Project Structure
+## 📂 Project Structure
+```
 artcanvas-gallery/
 │
 ├── public/
@@ -56,7 +56,7 @@ artcanvas-gallery/
 ├── package.json
 └── README.md
 
-## Installation & Setup
+## ⚙️ Installation & Setup
 
 # Clone the Repository
 [git clone https://github.com/s](https://github.com/srsekhar9661/ArtCanvasGallery.git)
@@ -67,10 +67,10 @@ cd ArtCanvasGallery
 # Install Dependencies
 npm install
 
-# Run the Development Mode
+# 💻 Run the Development Mode
 npm run dev
 
-# Build for Production
+# 🏗 Build for Production
 npm run build
 
 # Preview with in the production
