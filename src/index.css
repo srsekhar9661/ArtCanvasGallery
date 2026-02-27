@@ -49,3 +49,37 @@ a {
 .painting-card:hover {
   transform: scale(1.03);
 }
+
+.hero {
+  height :80vh;
+  display : fles;
+  align-items: center;
+  justify-content : center;
+  background : url('https://picum.photos/1600/900?blur=3') center/cover no-repeat;
+  position : relative;
+}
+
+.hero::after {
+  content : "";
+  position : absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  z-index:2;
+
+}
+
+.hero-content h1{
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.hero-conten p{
+  font-size:1.2rem;
+  color:#ccc;
+}
