@@ -1,8 +1,10 @@
 import Navbar from "./Navbar";
+import ScrollToTop from "./ScrollToTop";
 
 function Layout({ children }) {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <div
         className="container"
