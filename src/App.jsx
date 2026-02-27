@@ -3,16 +3,18 @@ import Home from "./pages/Home";
 import Gallery from "./pages/Gallery";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-
+import Layout from "./components/Layout";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/gallery" element={<Gallery />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-    </Routes>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Layout>
   )
 }
 
