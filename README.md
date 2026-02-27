@@ -5,6 +5,7 @@ This project showcases a professional painting portfolio with smooth UI interact
 fullscreen image viewer with zoom & drag functionality, and a premium layout design.
 
 ## 🚀 Live Features
+```
 🌙 Dark artistic theme
 🖼 Dynamic Gallery Grid
 🔍 Fullscreen Image Viewer
@@ -19,7 +20,7 @@ fullscreen image viewer with zoom & drag functionality, and a premium layout des
 📌 Fixed Navbar with scroll shadow
 🔄 Scroll-to-top on route change
 📱 Responsive layout (basic)
-
+```
 ## 🛠 Tech Stack used
 React
 Vite 
@@ -55,7 +56,7 @@ artcanvas-gallery/
 │
 ├── package.json
 └── README.md
-
+```
 ## ⚙️ Installation & Setup
 
 # Clone the Repository
