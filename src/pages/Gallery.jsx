@@ -1,5 +1,5 @@
 import paintings from "../data/paintings";
-import PaintingCard from "../components/Paintings";
+import PaintingCard from "../components/PaintingCard";
 
 function Gallery(){
     return (
