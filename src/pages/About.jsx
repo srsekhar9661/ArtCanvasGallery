@@ -55,7 +55,7 @@ function About() {
       <section className="about-philosophy">
         <div className="container">
           <h2>Artistic Philosophy</h2>
-          <p>
+          <p>   
             “The source of inspiration for my creative artworks has always been
             the material world that I see and the dreams that appear in my mind.”
           </p>
