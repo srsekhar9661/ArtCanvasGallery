@@ -1,4 +1,5 @@
 import './About.css';
+import Footer from './Footer';
 
 function About() {
   return (
@@ -60,6 +61,7 @@ function About() {
           </p>
         </div>
       </section>
+      <Footer/>
 
     </div>
   );

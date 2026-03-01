@@ -1,35 +1,83 @@
-.detail-page { padding: 120px 0; }
+.detail-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px; /* Space between buttons and image */
+}
 
-.back-btn { ... }
+.action-btn {
+  padding: 10px 20px;
+  background-color: #0c2c38;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.action-btn:hover {
+  background-color: #1a4d5e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
 
 .detail-image-wrapper {
   position: relative;
   text-align: center;
   margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden; /* Prevents large rotated images from overlapping text */
+  background-color: #0c2c38;
 }
 
 .detail-image-wrapper img {
   max-width: 100%;
-  max-height: 80vh;
+  max-height: 70vh; /* Reduced slightly to fit buttons comfortably */
   object-fit: contain;
   border-radius: 12px;
 }
-
-.detail-text {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
+/* The Modal background */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9); /* Dark backdrop */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* Ensure this is the highest number on your page */
 }
 
-.detail-text h1 { ... }
-.detail-text p { ... }
-.detail-meta p { ... }
+/* The container for the zoomed image */
+.modal-image-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: grab;
+}
 
-/* overlay */
-.detail-overlay { ... }
+.modal-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  user-select: none;
+}
 
-/* modal */
-.modal { ... }
-.modal-controls { ... }
-.modal-image-wrapper { ... }
-.modal-image { ... }
+.Image-container{
+  display: flex;
+
+}
+.detail-text{
+  margin-left: 30px;
+}

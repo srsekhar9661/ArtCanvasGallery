@@ -18,7 +18,7 @@ function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="container nav-content">
-        <h2 className="logo">ArtCanvasGallery</h2>
+        <h2 className="logo">Directional Works</h2>
 
         <div className="nav-links">
           <Link className={location.pathname === "/" ? "active" : ""} to="/">Home</Link>

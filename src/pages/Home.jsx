@@ -1,22 +1,14 @@
 import { Link } from "react-router-dom";
 import paintings from "../data/paintings";
+import Footer from "./Footer";
+import Slider from "../components/Slider";
 
 function Home() {
   const featured = paintings.slice(0, 4);
 
   return (
     <div className="home-page">
-
-      {/* HERO SECTION */}
-      <section className="hero-section">
-        <div className="hero-overlay">
-          <h1>Praveen S.</h1>
-          <p>Fine Artist & International Exhibitor</p>
-          <Link to="/gallery" className="hero-btn">
-            View Gallery
-          </Link>
-        </div>
-      </section>
+      <Slider />
 
       {/* FEATURED WORKS */}
       <section className="featured-section container">
@@ -43,11 +35,12 @@ function Home() {
           <h2>Artist Statement</h2>
           <p>
             “The source of inspiration for my creative artworks has always been
-            the material world that I see and the dreams that appear in my mind.”
+            the material world that I see and the dreams that appear in my
+            mind.”
           </p>
         </div>
       </section>
-
+      <Footer />
     </div>
   );
 }
