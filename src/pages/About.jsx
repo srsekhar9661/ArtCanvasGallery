@@ -51,7 +51,7 @@ function About() {
         </div>
       </section>
 
-      {/* PHILOSOPHY */}
+      {/* PHILOSOPHY */} 
       <section className="about-philosophy">
         <div className="container">
           <h2>Artistic Philosophy</h2>
