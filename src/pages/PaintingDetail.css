@@ -1,0 +1,35 @@
+.detail-page { padding: 120px 0; }
+
+.back-btn { ... }
+
+.detail-image-wrapper {
+  position: relative;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.detail-image-wrapper img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.detail-text {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.detail-text h1 { ... }
+.detail-text p { ... }
+.detail-meta p { ... }
+
+/* overlay */
+.detail-overlay { ... }
+
+/* modal */
+.modal { ... }
+.modal-controls { ... }
+.modal-image-wrapper { ... }
+.modal-image { ... }

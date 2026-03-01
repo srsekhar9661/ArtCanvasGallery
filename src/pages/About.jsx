@@ -1,64 +1,63 @@
+import './About.css';
+
 function About() {
   return (
     <div className="about-page">
-      
-      {/* Hero Section */}
+
+      {/* HERO */}
       <section className="about-hero">
-        <h1>About the Artist</h1>
-        <p>Exploring emotion, imagination, and depth through canvas.</p>
+        <h1>Praveen S.</h1>
+        <p>Fine Artist • Visual Effects Professional • International Exhibitor</p>
       </section>
 
-      {/* Bio Section */}
-      <section className="about-content container">
-        <div className="about-text">
-          <h2>The Journey</h2>
-          <p>
-            ArtCanvasGallery represents years of dedication to artistic
-            expression. Each painting reflects a moment of inspiration,
-            combining texture, color, and movement to create emotional depth.
-          </p>
-          <p>
-            The artist believes that art is not just visual beauty, but a
-            conversation between imagination and reality — where every stroke
-            carries meaning.
-          </p>
-        </div>
-
+      {/* BIO SECTION */}
+      <section className="about-bio container">
         <div className="about-image">
-          <img
-            src="https://picsum.photos/500/600?grayscale"
-            alt="Artist"
-          />
+          <img src="/images/praveen.png" alt="Praveen S." />
+        </div>
+
+        <div className="about-text">
+          <h2>About the Artist</h2>
+          <p>
+            Praveen S. entered the field of arts at a very early age and pursued
+            Fine Arts with dedication and passion. Over the years, he has
+            participated in solo and group exhibitions across India and
+            internationally including USA and UK.
+          </p>
+          <p>
+            As a professional Visual Effects technician, he has worked in
+            reputed organizations such as DQ Entertainment International
+            Limited and Discreet Arts, contributing to Indian and overseas
+            projects.
+          </p>
+          <p>
+            Arts is not just a profession — it is his life line.
+          </p>
         </div>
       </section>
 
-      {/* Philosophy Section */}
+      {/* ACHIEVEMENTS */}
+      <section className="about-achievements">
+        <div className="container">
+          <h2>Awards & Recognition</h2>
+          <ul>
+            <li>International Golden Award – Chitrakala Parishad</li>
+            <li>ITAP Award for Ideal Teaching in Arts</li>
+            <li>Senior Award – Creative Fine Arts</li>
+            <li>Exhibited in USA, UK, Delhi, Hyderabad</li>
+            <li>National & International Awards (Online & Offline)</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* PHILOSOPHY */}
       <section className="about-philosophy">
         <div className="container">
           <h2>Artistic Philosophy</h2>
           <p>
-            "Art should evoke feeling before it seeks understanding."
+            “The source of inspiration for my creative artworks has always been
+            the material world that I see and the dreams that appear in my mind.”
           </p>
-          <p>
-            Every canvas is an exploration of emotion, inviting the viewer to
-            interpret and connect in their own unique way.
-          </p>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="about-stats container">
-        <div className="stat">
-          <h3>50+</h3>
-          <p>Completed Artworks</p>
-        </div>
-        <div className="stat">
-          <h3>10+</h3>
-          <p>Exhibitions</p>
-        </div>
-        <div className="stat">
-          <h3>5+</h3>
-          <p>Years of Experience</p>
         </div>
       </section>
 

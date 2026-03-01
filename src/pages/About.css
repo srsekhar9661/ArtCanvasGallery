@@ -1,0 +1,76 @@
+/* HERO */
+.about-hero {
+  padding: 120px 20px 80px;
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  color: #aaa;
+}
+
+/* BIO SECTION */
+.about-bio {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  padding: 100px 0;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  color: #bbb;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+/* ACHIEVEMENTS */
+.about-achievements {
+  padding: 100px 0;
+  background: #111;
+}
+
+.about-achievements h2 {
+  margin-bottom: 30px;
+}
+
+.about-achievements ul {
+  color: #bbb;
+  line-height: 1.8;
+}
+
+/* PHILOSOPHY */
+.about-philosophy {
+  padding: 120px 0;
+  text-align: center;
+}
+
+.about-philosophy p {
+  max-width: 700px;
+  margin: 20px auto;
+  font-style: italic;
+  color: #aaa;
+  line-height: 1.8;
+}

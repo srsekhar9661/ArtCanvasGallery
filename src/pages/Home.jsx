@@ -2,22 +2,23 @@ import { Link } from "react-router-dom";
 import paintings from "../data/paintings";
 
 function Home() {
-  const featured = paintings.slice(0, 3);
+  const featured = paintings.slice(0, 4);
 
   return (
-    <div>
-      {/* Hero Section */}
-      <section className="home-hero">
-        <div className="home-hero-content">
-          <h1>ArtCanvasGallery</h1>
-          <p>Experience emotion, texture, and imagination on canvas.</p>
+    <div className="home-page">
+
+      {/* HERO SECTION */}
+      <section className="hero-section">
+        <div className="hero-overlay">
+          <h1>Praveen S.</h1>
+          <p>Fine Artist & International Exhibitor</p>
           <Link to="/gallery" className="hero-btn">
-            Explore Gallery
+            View Gallery
           </Link>
         </div>
       </section>
 
-      {/* Featured Section */}
+      {/* FEATURED WORKS */}
       <section className="featured-section container">
         <h2>Featured Works</h2>
         <div className="featured-grid">
@@ -28,7 +29,7 @@ function Home() {
               className="featured-card"
             >
               <img src={item.image} alt={item.title} />
-              <div className="featured-overlay">
+              <div className="overlay">
                 <h3>{item.title}</h3>
               </div>
             </Link>
@@ -36,28 +37,17 @@ function Home() {
         </div>
       </section>
 
-      {/* About Preview */}
-      <section className="about-preview">
+      {/* ARTIST STATEMENT */}
+      <section className="artist-statement">
         <div className="container">
-          <h2>About the Artist</h2>
+          <h2>Artist Statement</h2>
           <p>
-            A journey through color, form, and expression. Each painting
-            reflects a deep connection between imagination and reality,
-            capturing moments of emotion on canvas.
+            “The source of inspiration for my creative artworks has always been
+            the material world that I see and the dreams that appear in my mind.”
           </p>
-          <Link to="/about" className="outline-btn">
-            Learn More
-          </Link>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="cta-section">
-        <h2>Interested in a Custom Artwork?</h2>
-        <Link to="/contact" className="hero-btn">
-          Contact Now
-        </Link>
-      </section>
     </div>
   );
 }

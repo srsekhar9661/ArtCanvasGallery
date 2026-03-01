@@ -15,6 +15,10 @@ a {
   color : inherit;
 }
 
+.page-content {
+  padding-top: 100px;
+}
+
 .container {
   width : 90%;
   max-width:1200px;
@@ -547,4 +551,108 @@ a {
 .contact-info p {
   color: #bbb;
   margin-bottom: 15px;
+}
+
+/* home page */
+/* HERO SECTION */
+.hero-section {
+  height: 100vh;
+  width: 100%;
+  background: url("/images/your-best-artwork.jpg") center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 80px 100px;
+  text-align: center;
+  backdrop-filter:blur(4px);
+}
+
+.hero-overlay h1 {
+  font-size: 4rem;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.hero-overlay p {
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  padding: 12px 30px;
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #ddd;
+}
+
+/* FEATURED GRID */
+.featured-section {
+  padding: 100px 0;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.featured-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.featured-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: 0.6s ease;
+}
+
+.featured-card:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.featured-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  color: #fff;
+}
+
+/* ARTIST STATEMENT */
+.artist-statement {
+  padding: 120px 0;
+  text-align: center;
+  background: #111;
+}
+
+.artist-statement p {
+  max-width: 700px;
+  margin: 20px auto;
+  color: #bbb;
+  font-style: italic;
+  line-height: 1.8;
 }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Contact.css";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -22,18 +23,20 @@ function Contact() {
 
   return (
     <div className="contact-page">
-      {/* Hero Section */}
-      <section className="contact-hero">
-        <h1>Get in Touch</h1>
-        <p>Interested in a custom artwork or collaboration?</p>
-      </section>
+      <div className="container">
 
-      {/* Contact Content */}
-      <section className="contact-content container">
-        <div className="contact-form">
-          <h2>Send a Message</h2>
+        <div className="contact-header">
+          <h1>Contact</h1>
+          <p>
+            For exhibitions, collaborations, or artwork inquiries,
+            feel free to get in touch.
+          </p>
+        </div>
 
-          <form onSubmit={handleSubmit}>
+        <div className="contact-layout">
+
+          {/* FORM */}
+          <form className="contact-form" onSubmit={handleSubmit}>
             <input
               type="text"
               name="name"
@@ -55,25 +58,25 @@ function Contact() {
             <textarea
               name="message"
               placeholder="Your Message"
-              rows="5"
+              rows="6"
               value={formData.message}
               onChange={handleChange}
               required
             ></textarea>
 
-            <button type="submit" className="hero-btn">
-              Send Message
-            </button>
+            <button type="submit">Send Message</button>
           </form>
-        </div>
 
-        <div className="contact-info">
-          <h2>Contact Information</h2>
-          <p>Email: artist@example.com</p>
-          <p>Phone: +91 98765 43210</p>
-          <p>Location: Vijayawada, India</p>
+          {/* CONTACT INFO */}
+          <div className="contact-info">
+            <h2>Contact Information</h2>
+            <p>Email: praveen.artist@example.com</p>
+            <p>Location: India</p>
+            <p>Available for exhibitions & collaborations</p>
+          </div>
+
         </div>
-      </section>
+      </div>
     </div>
   );
 }

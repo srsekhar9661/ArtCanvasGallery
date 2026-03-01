@@ -4,15 +4,12 @@ import ScrollToTop from "./ScrollToTop";
 function Layout({ children }) {
   return (
     <>
-      <ScrollToTop />
-      <Navbar />
-      <div
-        className="container"
-        style={{ paddingTop: "100px", paddingBottom: "40px" }}
-      >
-        {children}
-      </div>
-    </>
+    <ScrollToTop />
+    <Navbar />
+    <div className="page-content">
+      {children}
+    </div>
+  </>
   );
 }
 

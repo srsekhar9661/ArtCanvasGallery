@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import paintings from "../data/paintings";
+import './PaintingDetail.css';
 
 function PaintingDetail() {
   const { id } = useParams();
@@ -74,27 +75,39 @@ function PaintingDetail() {
 
   return (
     <div className="detail-page">
-      <button className="back-btn" onClick={() => navigate(-1)}>
-        ← Back to Gallery
-      </button>
+  <div className="container">
 
-      <div className="detail-content">
-        <div className="detail-image-wrapper">
-          <img src={painting.image} alt={painting.title} />
-          <div className="detail-overlay">
-            <button onClick={() => setIsOpen(true)}>🔍 View</button>
-          </div>
-        </div>
+    <button className="back-btn" onClick={() => navigate(-1)}>
+      ← Back to Gallery
+    </button>
 
-        <div className="detail-text">
-          <h1>{painting.title}</h1>
-          <p>
-            This artwork explores depth, emotion, and expressive texture.
-          </p>
-        </div>
+    {/* IMAGE CENTERED */}
+    <div className="detail-image-wrapper">
+      <img src={painting.image} alt={painting.title} />
+
+      <div className="detail-overlay">
+        <button onClick={() => setIsOpen(true)}>🔍 View</button>
       </div>
+    </div>
 
-      {isOpen && (
+    {/* CONTENT BELOW IMAGE */}
+    <div className="detail-text">
+      <h1>{painting.title}</h1>
+
+      <p>
+        This artwork explores depth, emotion, and expressive texture.
+      </p>
+
+      <div className="detail-meta">
+        <p><strong>Medium:</strong> Acrylic on Canvas</p>
+        <p><strong>Year:</strong> 2024</p>
+      </div>
+    </div>
+
+  </div>
+
+  {/* KEEP YOUR MODAL ZOOM SYSTEM */}
+  {isOpen && (
         <div className="modal" onClick={closeModal}>
           <div
             className="modal-controls"
@@ -119,14 +132,20 @@ function PaintingDetail() {
               onMouseDown={handleMouseDown}
               style={{
                 transform: `translate(${position.x}px, ${position.y}px) scale(${zoom})`,
-                cursor: zoom > 1 ? (isDragging ? "grabbing" : "grab") : "default"
+                cursor:
+                  zoom > 1
+                    ? isDragging
+                      ? "grabbing"
+                      : "grab"
+                    : "default"
               }}
               draggable={false}
             />
           </div>
         </div>
       )}
-    </div>
+</div>
+    
   );
 }
 
