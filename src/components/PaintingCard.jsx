@@ -1,20 +1,14 @@
 import { Link } from "react-router-dom";
-import "./PaintingCard.css";
 
 function PaintingCard({ painting }) {
   return (
     <Link
       to={`/gallery/${painting.id}`}
       className="painting-card"
+      data-analytics="gallery_interaction"
     >
-      <img
-        src={painting.image}
-        alt={painting.title}
-      />
-
-      <div className="painting-overlay">
-        <h3>{painting.title}</h3>
-      </div>
+      <span className="painting-card-image"><img src={painting.image} alt={`Original artwork by Praveen S., work ${painting.id}`} loading="lazy" decoding="async" /></span>
+      <span className="painting-card-caption"><span>Work {String(painting.id).padStart(2, "0")}</span><span aria-hidden="true">View artwork ↗</span></span>
     </Link>
   );
 }

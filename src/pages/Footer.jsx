@@ -1,69 +1,24 @@
-import React from "react";
-import "./Footer.css";
 import { Link } from "react-router-dom";
+import { businessEmail, whatsappNumber, whatsappUrl } from "../utils/enquiry";
+import { openAnalyticsPreferences } from "../lib/analytics";
 
 const Footer = () => {
   return (
     <footer className="footer">
-      {" "}
-      {/* Added class here */}
-      <div className="footer-container">
-        {" "}
-        {/* Added class here */}
-        {/* About Section (Matches your CSS .footer-about) */}
-        <div className="footer-about">
-          <h2>Directional Works</h2>
-          <p>
-            The source of inspiration for my creative artworks has always been
-            the material world that I see and the dreams that appear in my mind
-          </p>
-          <div className="subscribe-box">
-            <input type="email" placeholder="Enter your email" />
-            <button>Subscribe</button>
-          </div>
+      <div className="container footer-main">
+        <div className="footer-identity">
+          <Link className="footer-brand" to="/"><img src="/images/directional-works-logo-transparent.png" alt="" width="98" height="98" loading="lazy" />Directional <em>Works</em></Link>
+          <p>Creative / Growth / Collaboration with Praveen S.</p>
         </div>
-        {/* General Links */}
-        <div className="footer-links">
-          <h4>General</h4>
-          <ul>
-            <li><Link to="/gallery">Gallery</Link></li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
+        <div className="footer-nav">
+          <p className="eyebrow light">Explore</p>
+          <Link to="/">Home</Link><Link to="/about">About</Link><Link to="/services">Services</Link><Link to="/gallery">Gallery</Link><Link to="/collaborations">Collaborations</Link><Link to="/contact">Contact</Link>
         </div>
-        {/* Social Links */}
-        <div className="footer-links">
-          <h4>Follow Us</h4>
-          <ul>
-            <li>
-              <a href="#">Facebook</a>
-            </li>
-            <li>
-              <a href="#">Twitter</a>
-            </li>
-            <li>
-              <a href="#">LinkedIn</a>
-            </li>
-            <li>
-              <a href="#">Instagram</a>
-            </li>
-          </ul>
-        </div>
-        {/* Contact Info */}
-        <div className="footer-contact">
-          <h4>Contact Info</h4>
-          <p>Near to ESIL Metro station</p>
-          <p>+91 9876543210</p>
-          <p>directionalworks@gmail.com</p>
-        </div>
+        <div className="footer-note"><p className="eyebrow light">Get in touch</p><div className="footer-contact-links"><a href={whatsappUrl()} target="_blank" rel="noopener noreferrer">WhatsApp {whatsappNumber}</a><a href={`mailto:${businessEmail}`}>{businessEmail}</a><p>By appointment only.</p></div></div>
       </div>
-      <div className="footer-bottom">
-        <p>© 2026 Directional works. all rights reserved.</p>
-        <a href="#">Privacy Policy</a>
+      <div className="container footer-bottom">
+        <span>© {new Date().getFullYear()} Directional Works. All rights reserved.</span>
+        <span className="footer-legal"><Link to="/privacy">Privacy Policy</Link><Link to="/terms">Website Terms</Link><button type="button" onClick={openAnalyticsPreferences}>Analytics preferences</button></span>
       </div>
     </footer>
   );
